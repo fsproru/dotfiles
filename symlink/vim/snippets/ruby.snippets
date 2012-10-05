@@ -1,0 +1,28 @@
+snippet desc Describe subject
+	describe "${1:subject}" do
+		${2}
+	end
+snippet cont Context
+	context "${1:subject}" do
+		${2}
+	end
+snippet it it block
+	it "${1:should do something}" do
+		${2}
+	end
+snippet bef Before each test
+	before do
+		${1}
+	end
+snippet aft After each test
+	after do
+		${1}
+	end
+snippet let
+	let(:${1}) { ${2} }
+snippet its
+	its(:${1}) { ${2} }
+snippet subj
+	subject { ${1} }
+snippet deb Put the debugger in here
+	require 'ruby-debug';debugger

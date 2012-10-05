@@ -1,0 +1,58 @@
+[alias]
+  st = status
+  sp = smart-pull
+  padd = add -p
+  co = checkout
+  ffs = flow feature start
+  fff = flow feature finish
+  graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  lol = log --pretty=oneline --abbrev-commit --graph --decorate
+  unpushed = !"PROJ_BRANCH=$(git symbolic-ref HEAD | sed 's|refs/heads/||') && git log origin/$PROJ_BRANCH..HEAD"
+  unpulled = !"PROJ_BRANCH=$(git symbolic-ref HEAD | sed 's|refs/heads/||') && git fetch && git log HEAD..origin/$PROJ_BRANCH"
+  ctags = !.git/hooks/ctags
+  unstage = reset HEAD
+  dc = diff --cached
+  unstaged = diff
+  current-branch = !git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'
+  author = !"git config user.name 'Alexander Tamoykin' && git config user.email 'at@zestcash.com'"
+  # Usage: git track origin/feature-123-login-form
+  # track = checkout -t
+[push]
+  default = tracking
+[color]
+  ui = true
+[color "branch"]
+  current = yellow black
+  local = yellow
+  remote = magenta
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red reverse
+  new = green reverse
+  whitespace = white reverse
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan reverse
+  branch = magenta
+[core]
+  excludesfile = ~/.git_ignore
+[init]
+  templatedir = ~/.git_template
+[format]
+  pretty = %Cblue%h%Creset %Cgreen[%ar]%Creset (%an) %s
+[apply]
+  whitespace = warn
+[help]
+  autocorrect = 0
+[status]
+  submodule = 1
+[push]
+  default = current
+[user]
+	name = Alexander Tamoykin
+	email = at@zestcash.com
+###
+# vim: ft=gitconfig
+###

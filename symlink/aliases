@@ -1,0 +1,82 @@
+#!/bin/sh
+
+# Unix
+alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -nr | head -n 20"
+alias tmux='tmux -2'
+alias show-colors='for code in {000..255}; do print -P -- "$code: %F{$code}Test%f"; done'
+alias ll="ls -lha"
+alias flushdns='dscacheutil -flushcache'
+
+# Repeat a command multiple times
+function repeat() {
+  if [[ $1 == "--help" || $1 == "-h" || $1 == "" ]]; then
+    echo "Usage: repeat <n-times> <command>"
+  else
+    n=$1
+    shift
+    while [ $(( n -= 1 )) -ge 0 ]
+    do
+      "$@"
+    done
+  fi
+}
+
+# Bundler
+alias be="bundle exec"
+alias bi="bundle install"
+alias bs="bundle show"
+
+# knife
+alias kil="knife instance list"
+
+# gem
+alias gemi='gem install --no-rdoc --no-ri'
+function vimgem() {
+  gem_path=$(bundle show $1)
+  cd $gem_path
+  vim
+  cd -
+}
+
+# git
+git-new() {
+  [ -d "$1" ] || mkdir "$1" &&
+  cd "$1" &&
+  git init &&
+  touch .gitignore &&
+  git add .gitignore &&
+  git commit -m "Added .gitignore."
+}
+# alias glog='git log --pretty="format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset"'
+alias gl='git log'
+alias gla='git lol --all'
+glsearch() {
+  query="$1"
+  shift
+  glog --pickaxe-regex "-S$query" "$@"
+}
+alias gs='git status'
+alias gsp='git smart-pull'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias gap='git add -p'
+alias gc='git commit'
+
+# setup
+developer_setup_git() {
+  rvm gemset use global
+  gem install git-smart
+  echo "Install git flow"
+}
+
+developer_setup_tmux() {
+  chmod a+rwx /tmp/pair
+  echo -e "#!/bin/zsh\nSSH_AUTH_SOCK=$SSH_AUTH_SOCK tmux -S /tmp/pair attach" > /tmp/pair-me-up-scotty
+  chmod a+rx /tmp/pair-me-up-scotty
+  echo "Don't forget to git pair"
+}
+
+# Rails
+alias migrate="bundle exec db:migrate db:test:prepare"
+
+# vim ft=sh
