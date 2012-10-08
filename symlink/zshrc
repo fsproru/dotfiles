@@ -90,6 +90,9 @@ setopt cdablevars
 setopt CORRECT
 unsetopt CORRECT_ALL
 
+# Don't autorename the title
+export DISABLE_AUTO_TITLE="true"
+
 # Enable extended globbing
 setopt EXTENDED_GLOB
 
