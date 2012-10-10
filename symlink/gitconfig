@@ -3,8 +3,6 @@
   sp = smart-pull
   padd = add -p
   co = checkout
-  ffs = flow feature start
-  fff = flow feature finish
   graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   lol = log --pretty=oneline --abbrev-commit --graph --decorate
   unpushed = !"PROJ_BRANCH=$(git symbolic-ref HEAD | sed 's|refs/heads/||') && git log origin/$PROJ_BRANCH..HEAD"
@@ -12,11 +10,8 @@
   ctags = !.git/hooks/ctags
   unstage = reset HEAD
   dc = diff --cached
-  unstaged = diff
   current-branch = !git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'
   author = !"git config user.name 'Alexander Tamoykin' && git config user.email 'at@zestcash.com'"
-  # Usage: git track origin/feature-123-login-form
-  # track = checkout -t
 [push]
   default = tracking
 [color]
@@ -53,6 +48,5 @@
 [user]
 	name = Alexander Tamoykin
 	email = at@zestcash.com
-###
+
 # vim: ft=gitconfig
-###
