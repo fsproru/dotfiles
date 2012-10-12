@@ -15,7 +15,7 @@ for name in symlink/*; do
   if [ -e $target ]; then
     echo "WARNING: $target exists but not a symlink" && continue
   else
-    ln -s $dotfiles_path/$name $HOME/.$name
+    ln -s $dotfiles_path/symlink/$name $HOME/.$name
   fi
 done
 cd -
