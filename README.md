@@ -1,4 +1,5 @@
 #dotfiles-portable
+Potrable set of UNIX configuration files
 
 #Install
 ```
