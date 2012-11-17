@@ -1,5 +1,7 @@
 ---
 # ADD LOCAL CONFIGURATION HERE
+install: --no-rdoc --no-ri
+update:  --no-rdoc --no-ri
 
 # DO NOT EDIT BELOW THIS LINE
 :verbose: true
