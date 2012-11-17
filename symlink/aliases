@@ -49,4 +49,5 @@ setup() {
 # Rails
 alias migrate="bundle exec rake db:migrate db:test:prepare"
 
+unalias sl
 # vim ft=sh
