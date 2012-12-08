@@ -42,7 +42,7 @@ alias gc='git commit'
 
 # setup
 setup() {
-  gem install git-smart simple-git-pair rbenv-rehash
+  gemi git-smart simple-git-pair rbenv-rehash teamocil
   brew install wemux
 }
 
