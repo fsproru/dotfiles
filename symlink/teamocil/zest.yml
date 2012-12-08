@@ -1,0 +1,45 @@
+session:
+  name: "zest"
+  windows:
+    - name: "sv"
+      root: "~/Documents/projects/zest/ZestServicing"
+      splits:
+        - cmd: "vim"
+        - cmd: "clear"
+          width: 50
+          focus: true
+    - name: "iv"
+      root: "~/Documents/projects/zest/ZestAdmin"
+      splits:
+        - cmd: "vim"
+        - cmd: "clear"
+          width: 50
+          focus: true
+    - name: "bork"
+      root: "~/Documents/projects/zest/bork"
+      splits:
+        - cmd: "vim"
+        - cmd: "clear"
+          width: 50
+          focus: true
+    - name: "www"
+      root: "~/Documents/projects/zest/www"
+      splits:
+        - cmd: "vim"
+        - cmd: "clear"
+          width: 50
+          focus: true
+    - name: "www-service"
+      root: "~/Documents/projects/zest/www-service"
+      splits:
+        - cmd: "vim"
+        - cmd: "clear"
+          width: 50
+          focus: true
+    - name: "telephony"
+      root: "~/Documents/projects/zest/telephony_engine"
+      splits:
+        - cmd: "vim"
+        - cmd: "clear"
+          width: 50
+          focus: true

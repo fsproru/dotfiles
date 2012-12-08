@@ -1,0 +1,17 @@
+session:
+  name: "fsproru"
+  windows:
+    - name: "dotfiles"
+      root: "~/Documents/projects/fsproru/dotfiles-portable"
+      splits:
+        - cmd: "vim"
+        - cmd: "clear"
+          width: 50
+          focus: true
+    - name: "sgp"
+      root: "~/Documents/projects/fsproru/simple-git-pair"
+      splits:
+        - cmd: "vim"
+        - cmd: "clear"
+          width: 50
+          focus: true
