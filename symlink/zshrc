@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 
 DISABLE_AUTO_UPDATE="true"
 ZSH_THEME="bira"
-plugins=(gem brew)
+plugins=(gem brew bundler)
 
 source $ZSH/oh-my-zsh.sh
 
