@@ -5,7 +5,6 @@ ZSH_THEME="bira"
 plugins=(gem brew bundler)
 
 source $ZSH/oh-my-zsh.sh
-source ~/.plugins/ssh-find-agent/ssh-find-agent.bash
 
 # completion
 autoload -U compinit
@@ -25,14 +24,16 @@ setopt no_beep
 export EDITOR=vim
 
 # aliases
-if [ -e "$HOME/.aliases" ]; then
-  source "$HOME/.aliases"
+source "$HOME/.aliases"
+
+# Fix lost ssh-agent in tmux
+source ~/.plugins/ssh-find-agent/ssh-find-agent.bash
+if ! test $SSH_AUTH_SOCK; then
+  set_ssh_agent_socket
 fi
 
 # zestsecrets
-if [ -e "$HOME/.zestsecrets" ]; then
-  source "$HOME/.zestsecrets"
-fi
+source "$HOME/.zestsecrets"
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi # rbenv init
 # export CC=/usr/bin/gcc-4.2 # CLI tools
