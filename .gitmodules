@@ -1,6 +1,6 @@
 [submodule "vimfiles"]
 	path = vimfiles
 	url = git@github.com:fsproru/vimfiles.git
-[submodule "symlink/oh-my-zsh"]
-	path = symlink/oh-my-zsh
+[submodule "symlink/plugins/oh-my-zsh"]
+	path = symlink/plugins/oh-my-zsh
 	url = git://github.com/robbyrussell/oh-my-zsh.git
