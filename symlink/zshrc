@@ -1,7 +1,7 @@
 # -------------------------------------------+
 # oh-my-zsh template                         #
 # -------------------------------------------+
-ZSH=$HOME/.oh-my-zsh
+ZSH=$HOME/.plugins/oh-my-zsh
 
 DISABLE_AUTO_UPDATE="true"
 ZSH_THEME="bira"
