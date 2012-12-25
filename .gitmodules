@@ -4,3 +4,6 @@
 [submodule "symlink/plugins/oh-my-zsh"]
 	path = symlink/plugins/oh-my-zsh
 	url = git://github.com/robbyrussell/oh-my-zsh.git
+[submodule "symlink/plugins/ssh-find-agent"]
+	path = symlink/plugins/ssh-find-agent
+	url = git://github.com/wwalker/ssh-find-agent.git

@@ -1,6 +1,3 @@
-# -------------------------------------------+
-# oh-my-zsh template                         #
-# -------------------------------------------+
 ZSH=$HOME/.plugins/oh-my-zsh
 
 DISABLE_AUTO_UPDATE="true"
@@ -8,10 +5,7 @@ ZSH_THEME="bira"
 plugins=(gem brew bundler)
 
 source $ZSH/oh-my-zsh.sh
-
-# -------------------------------------------+
-#  Customization                             #
-# -------------------------------------------+
+source ~/.plugins/ssh-find-agent/ssh-find-agent.bash
 
 # completion
 autoload -U compinit
