@@ -2,7 +2,7 @@ session:
   name: "fsproru"
   windows:
     - name: "dotfiles"
-      root: "~/Documents/projects/fsproru/dotfiles-portable"
+      root: "~/Documents/projects/fsproru/dotfiles"
       splits:
         - cmd: "vim"
         - cmd: "clear"
