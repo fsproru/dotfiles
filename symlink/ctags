@@ -4,3 +4,4 @@
 --exclude=tmp
 --exclude=.git
 --exclude=db/migrate
+--exclude=.jhw-cache
