@@ -4,6 +4,7 @@
 --ignore-dir=tmp/
 --ignore-dir=.idea
 --ignore-dir=.jhw-cache
+--ignore-dir=vendor/bundle
 
 --type-set=markdown=.markdown
 --type-set=cucumber=.feature
