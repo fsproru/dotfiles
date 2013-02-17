@@ -6,21 +6,20 @@
 --ignore-dir=.jhw-cache
 --ignore-dir=vendor/bundle
 
---type-set=markdown=.markdown
---type-set=cucumber=.feature
 --type-set=xcode=.pbxproj,.pbxuser,.perspectivev3
 --type-set=ragel=.rl
 --type-set=nib=.xib
 --type-set=plist=.plist
 --type-set=tmstuff=.tmproj,.tm_build_errors
-
---type-add=ruby=.slim
---type-add=ruby=.haml
---type-add=ruby=.ru
---type-add=css=.sass
---type-add=css=.scss
---type-add=js=.coffee
 --type-add=objc=.pch
+
+# Ruby stuff
+--type-set=markdown=.markdown
+--type-set=cucumber=.feature
+--type-add=ruby=.slim,.haml,.rake,.erb,.builder,.ru
+--type-add=yaml=.yml,.json
+--type-add=css=.sass,.scss
+--type-add=js=.coffee,.eco
 
 --nonib
 --notmstuff
