@@ -1,0 +1,6 @@
+--recurse
+--extra=+f
+--exclude=log
+--exclude=tmp
+--exclude=.git
+--exclude=db/migrate
