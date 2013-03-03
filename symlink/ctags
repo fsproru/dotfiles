@@ -1,4 +1,6 @@
 --recurse
+--langdef=coffee
+--langmap=coffee:.coffee.eco.slim.scss.haml.builder.yml.yaml.ejs.example
 --extra=+f
 --exclude=log
 --exclude=tmp
