@@ -19,7 +19,7 @@
 --type-add=ruby=.slim,.haml,.rake,.erb,.builder,.ru
 --type-add=yaml=.yml,.json
 --type-add=css=.sass,.scss
---type-add=js=.coffee,.eco
+--type-add=js=.coffee,.eco,.ejs
 
 --nonib
 --notmstuff
