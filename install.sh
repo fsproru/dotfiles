@@ -4,6 +4,9 @@ current_dir=$(dirname $0)
 dotfiles_path=$PWD/$current_dir
 vimfiles_path=$dotfiles_path/vimfiles
 
+echo "=== Initializing git submodules"
+git submodule update --init
+
 echo "=== Installing vimfiles"
 cd $vimfiles_path
 ./install.sh
