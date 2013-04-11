@@ -6,4 +6,6 @@
 --exclude=tmp
 --exclude=.git
 --exclude=db/migrate
+--exclude=vendor/bundle
 --exclude=.jhw-cache
+--exclude=jmeter
