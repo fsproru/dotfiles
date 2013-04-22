@@ -1,4 +1,0 @@
-#!/bin/sh
-rm -f .git/tags
-ruby -rbundler/setup -e 'puts $LOAD_PATH.join(" ")' | xargs -J % find % -name '*.rb' | xargs ctags --tag-relative -Rf.git/tags
-find . -name '*.rb' | xargs ctags --tag-relative -Rf.git/tags -a
