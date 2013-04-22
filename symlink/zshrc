@@ -2,7 +2,7 @@ ZSH=$HOME/.plugins/oh-my-zsh
 
 DISABLE_AUTO_UPDATE="true"
 ZSH_THEME="bira"
-plugins=(gem brew bundler)
+plugins=(gem brew bundler vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
