@@ -9,3 +9,5 @@
 --exclude=vendor/bundle
 --exclude=.jhw-cache
 --exclude=jmeter
+--exclude=public/vendor
+--exclude=coverage

@@ -1,6 +1,7 @@
 --sort-files
 
 --ignore-dir=log/
+--ignore-dir=coverage/
 --ignore-dir=tmp/
 --ignore-dir=.idea
 --ignore-dir=.jhw-cache
