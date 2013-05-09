@@ -1,3 +1,5 @@
+#!/bin/bash
+
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi # rbenv init
 # [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 export CC=/usr/bin/gcc-4.2 #needed to build rubies
@@ -10,10 +12,11 @@ if [ -f /etc/bash_completion ]; then
   source /etc/bash_completion
 fi
 
-if [ -d "$HOME/.bash_plugins" ]; then
-  source "$HOME/.bash_plugins/git-flow-completion/git-flow-completion.bash"
-  source "$HOME/.bash_plugins/git-completion.bash"
-
+if [ -d "$HOME/.plugins" ]; then
+  source ~/.plugins/git-completion.bash
+  source ~/.plugins/git-prompt.sh
+  export PS1='[\W]$(__git_ps1 "(%s)"): '
+  
   #Custoimized Prompt
   GREEN="\[\033[0;32m\]"
   LIGHT_GRAY="\[\033[0;37m\]"
@@ -39,7 +42,7 @@ fi
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
-export EDITOR=vim
+export EDITOR=emacsclient
 export HISTCONTROL=ignoredups
 
 shopt -s histappend

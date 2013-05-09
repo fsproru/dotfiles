@@ -1,8 +1,6 @@
 #!/bin/sh
 
 # Unix
-alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -nr | head -n 20"
-alias show-colors='for code in {000..255}; do print -P -- "$code: %F{$code}Test%f"; done'
 alias ll="ls -lha"
 alias flushdns='dscacheutil -flushcache'
 alias tmuxcopy='tmux show-buffer | pbcopy'
@@ -25,9 +23,6 @@ function repeat() {
 alias be="bundle exec"
 alias bi="bundle install"
 
-# knife
-alias kil="knife instance list"
-
 # gem
 alias gemi='gem install --no-rdoc --no-ri'
 
@@ -46,5 +41,12 @@ setup() {
   brew install wemux
 }
 
-unalias sl
+z() {
+  cd ~/Documents/projects/zest/$1
+}
+
+f() {
+  cd ~/Documents/projects/fsproru/$1
+}
+
 # vim ft=sh
