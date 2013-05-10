@@ -42,7 +42,9 @@ fi
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
-export EDITOR=emacsclient
+export ALTERNATE_EDITOR=emacs EDITOR=emacsclient VISUAL=emacsclient
+export GIT_EDITOR=/usr/local/bin/emacsclient
+
 export HISTCONTROL=ignoredups
 
 shopt -s histappend
