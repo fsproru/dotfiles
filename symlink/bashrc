@@ -26,7 +26,7 @@ if [ -d "$HOME/.plugins" ]; then
 
   GIT_PS1_SHOWDIRTYSTATE=true
   GIT_PS1_SHOWUNTRACKEDFILES=true
-  PS1=$YELLOW'\u@\h:'$GREEN'\w'$LIGHT_RED'$(__git_ps1 " (%s)")'$LIGHT_GRAY'\$ '
+  PS1=$YELLOW'\u@\h:'$GREEN'\W'$LIGHT_RED'$(__git_ps1 " (%s)")'$LIGHT_GRAY'\$ '
 fi
 
 # aliases
