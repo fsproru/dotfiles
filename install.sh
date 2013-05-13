@@ -26,4 +26,14 @@ for name in symlink/*; do
 done
 cd -
 
+echo "=== Creating a symlink for iTerm2"
+iterm_file=com.googlecode.iterm2.plist
+iterm_path=$HOME/Library/Preferences/$iterm_file
+
+if [ -e $iterm_path ]; then
+  echo "WARNING: $iterm_path exists but not a symlink" && continue
+else
+  ln -s $HOME/.$iterm_file $iterm_path
+fi
+
 echo === Done
