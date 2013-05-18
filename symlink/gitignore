@@ -3,3 +3,5 @@ tags
 .swo
 vendor/bundle
 .DS_Store
+*~
+\#*\#
