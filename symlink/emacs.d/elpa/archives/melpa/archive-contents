@@ -243,8 +243,12 @@
        [(20120910 951)
 	nil "UUID's for EmacsLisp [github]" single])
  (use-package .
-	      [(20130427 1509)
-	       nil "No description available. [github]" single])
+	      [(20130515 901)
+	       ((bind-key
+		 (1 0))
+		(diminish
+		 (0 44)))
+	       "A use-package declaration for simplifying your .emacs [github]" single])
  (usage-memo .
 	     [(20110722 1551)
 	      nil "integration of Emacs help system and memo [wiki]" single])
@@ -297,7 +301,7 @@
 	   [(20110401 823)
 	    nil "Persistent Undo History for GNU Emacs [github]" single])
  (undo-tree .
-	    [(20130514 2100)
+	    [(20130516 8)
 	     nil "Treat undo history as a tree [git]" single])
  (underwater-theme .
 		   [(20120615 1149)
@@ -688,7 +692,7 @@
 	    [(20121227 1032)
 	     nil "Rip Clojure namespaces apart and rebuild them. [github]" single])
  (skewer-mode .
-	      [(20130515 23)
+	      [(20130515 1748)
 	       ((simple-httpd
 		 (1 4 0))
 		(js2-mode
@@ -1362,7 +1366,7 @@
 	   (2 0 0)))
 	 "Client for Clojure nREPL [github]" single])
  (notmuch .
-	  [(20130513 2108)
+	  [(20130515 2223)
 	   nil "No description available. [git]" tar])
  (nose .
        [(20110804 819)
@@ -1510,7 +1514,7 @@
 	    [(20120716 1647)
 	     nil "advanced highlighting of matching parentheses [wiki]" single])
  (mentor .
-	 [(20130515 33)
+	 [(20130515 2157)
 	  ((xml-rpc
 	    (0 6 8)))
 	  "Frontend for the rTorrent bittorrent client [github]" tar])
@@ -2713,7 +2717,7 @@
 		     (20130225 1754)))
 		   "Data viewer for GNU R [github]" single])
  (ess .
-      [(20130510 1246)
+      [(20130515 915)
        nil "No description available. [github]" tar])
  (espuds .
 	 [(20130226 2124)
@@ -2756,7 +2760,7 @@
 		    (0 5)))
 		  "A minor mode, a keybinding set based on ergonomics. [git]" tar])
  (erefactor .
-	    [(20130404 2209)
+	    [(20130516 915)
 	     nil "Emacs-Lisp refactoring utilities [github]" single])
  (eredis .
 	 [(20120808 2207)
@@ -2930,7 +2934,7 @@
        [(20091025 922)
 	nil "Emacs Image Manipulation Package [wiki]" single])
  (egison-mode .
-	      [(20130424 1556)
+	      [(20130516 1003)
 	       nil "Egison editing mode [github]" single])
  (egg .
       [(20120825 924)
@@ -3397,7 +3401,7 @@
 	   [(20081011 2126)
 	    nil "Quote text with a semi-box. [github]" single])
  (bookmark+ .
-	    [(20130512 1801)
+	    [(20130515 2128)
 	     nil "Bookmark+: extensions to standard library `bookmark.el'. [wiki]" tar])
  (bm .
      [(20130226 1440)
