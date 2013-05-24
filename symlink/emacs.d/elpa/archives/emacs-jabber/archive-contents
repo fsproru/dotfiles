@@ -1,0 +1,5 @@
+(1
+ (jabber .
+	 [(0 8 92)
+	  nil "A Jabber client for Emacs." tar]))
+
