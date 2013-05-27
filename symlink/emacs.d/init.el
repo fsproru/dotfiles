@@ -41,6 +41,9 @@
 (load "server")
 (unless (server-running-p) (server-start))
 
+;; tell emacs about homebrew
+(add-to-list 'exec-path "/usr/local/bin")
+
 ;; multi-term
 (require 'multi-term)
 (setq multi-term-program "/bin/bash")
@@ -75,6 +78,20 @@
 (global-set-key (kbd "S-C-<down>") 'shrink-window)
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 
+;; movement keys
+(global-set-key (kbd "s-<down>")      (kbd "M->"))
+(global-set-key (kbd "s-<up>")        (kbd "M-<"))
+(global-set-key (kbd "s-<right>")     (kbd "C-e"))
+(global-set-key (kbd "s-<left>")      (kbd "C-a"))
+(global-set-key (kbd "s-<backspace>") (kbd "C-a C-k"))
+
+;; stop annoying beeping
+(setq ring-bell-function 'ignore)
+
+;; expand tabs
+(setq standard-indent 2)
+(setq-default indent-tabs-mode nil)
+
 ;; chat
 (setq jabber-account-list
      '(("at@zestfinance.com"
@@ -103,16 +120,26 @@
 	 (address "at@zestfinance.com"))))
 (add-hook 'message-mode-hook 'flyspell-mode)
 
+;; address book
+(require 'google-contacts)
+(require 'google-contacts-gnus)
+(require 'google-contacts-message)
+
 ;; customization
+(set-face-attribute 'default nil :height 190)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(blink-cursor-mode nil)
+ '(display-time-mode t)
  '(grep-find-ignored-directories (quote ("SCCS" "RCS" "CVS" "MCVS" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" "log" "vendor/bundle" ".idea" "coverage" "jmeter")))
  '(jabber-alert-presence-hooks nil)
  '(jabber-auto-reconnect t)
- '(password-cache-expiry 604800))
+ '(password-cache-expiry 604800)
+ '(scroll-bar-mode nil)
+ '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
