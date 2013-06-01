@@ -57,7 +57,7 @@
 			[(1 1)
 			 nil "Parse and browse f90 interfaces" single])
  (ggtags .
-	 [(0 6 3)
+	 [(0 6 4)
 	  nil "GNU Global source code tagging system" single])
  (heap .
        [(0 3)
