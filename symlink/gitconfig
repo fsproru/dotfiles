@@ -31,7 +31,7 @@
   untracked = cyan reverse
   branch = magenta
 [core]
-  excludesfile = ~/.git_ignore
+  excludesfile = ~/.gitignore
 [init]
   templatedir = ~/.git_template
 [format]
