@@ -1,2 +1,0 @@
-machine imap.gmail.com login at@zestfinance.com port 993
-machine smtp.gmail.com login at@zestfinance.com port 587
