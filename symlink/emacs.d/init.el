@@ -23,54 +23,67 @@
 ;; color theme
 (load-theme 'solarized-dark t)
 
-;; Copy and Paste
-(defun copy-from-osx ()
-(shell-command-to-string "pbpaste"))
+(unless window-system ;; running inside the terminal
+  (progn
+      (defun copy-from-osx ()
+        (shell-command-to-string "pbpaste"))
 
-(defun paste-to-osx (text &optional push)
-(let ((process-connection-type nil))
-(let ((proc (start-process "pbcopy" "*Messages*" "pbcopy")))
-(process-send-string proc text)
-(process-send-eof proc))))
+      (defun paste-to-osx (text &optional push)
+        (let ((process-connection-type nil))
+          (let ((proc (start-process "pbcopy" "*Messages*" "pbcopy")))
+            (process-send-string proc text)
+            (process-send-eof proc))))
+      (setq x-select-enable-clipboard t)
 
-;; Override defaults to use the mac copy and paste
-(setq interprogram-cut-function 'paste-to-osx)
-(setq interprogram-paste-function 'copy-from-osx)
+      ;; Override defaults to use the mac copy and paste
+      (setq interprogram-cut-function 'paste-to-osx)
+      (setq interprogram-paste-function 'copy-from-osx))
 
-;; start in server mode 
+  ;; makes shift-up work in a terminal
+  (define-key input-decode-map "\e[1;2A" [S-up]))
+
+
+;; start in server mode
 (load "server")
 (unless (server-running-p) (server-start))
 
-;; tell emacs about homebrew
-(add-to-list 'exec-path "/usr/local/bin")
+;; Setting up a PATH for GUI emacs
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize)
+  (exec-path-from-shell-copy-env "EPHRASE"))
+
+;; flymake ruby
+(require 'flymake-ruby)
+(add-hook 'ruby-mode-hook 'flymake-ruby-load)
 
 ;; multi-term
 (require 'multi-term)
 (setq multi-term-program "/bin/bash")
 (setq multi-term-dedicated-select-after-open-p t)
-(when (require 'term nil t) ; only if term can be loaded..
+
+;; term key bindings
+(when (require 'term nil t)
   (global-set-key (kbd "<f8>") 'multi-term-dedicated-toggle)
   (global-set-key (kbd "<f7>") 'multi-term-next)
   (global-set-key (kbd "<f9>") 'multi-term-prev)
-  (global-set-key (kbd "<f6>") 'multi-term)  
+  (global-set-key (kbd "<f6>") 'multi-term)
 
   (setq term-bind-key-alist
-	(list (cons "C-c C-c" 'term-interrupt-subjob)
-	 (cons "C-p" 'previous-line)
-	 (cons "C-n" 'next-line)
-	 (cons "M-f" 'term-send-forward-word)
-	 (cons "M-b" 'term-send-backward-word)
-	 (cons "C-c C-j" 'term-line-mode)
-	 (cons "C-c C-k" 'term-char-mode)
-	 (cons "M-DEL" 'term-send-backward-kill-word)
-	 (cons "M-d" 'term-send-forward-kill-word)
-	 (cons "C-r" 'term-send-reverse-search-history)
-	 (cons "M-p" 'term-send-raw-meta)
-	 (cons "M-y" 'term-send-raw-meta)
-	 (cons "C-y" 'term-paste))))
+        (list (cons "C-c C-c" 'term-interrupt-subjob)
+         (cons "C-p" 'previous-line)
+         (cons "C-n" 'next-line)
+         (cons "M-f" 'term-send-forward-word)
+         (cons "M-b" 'term-send-backward-word)
+         (cons "C-c C-j" 'term-line-mode)
+         (cons "C-c C-k" 'term-char-mode)
+         (cons "M-DEL" 'term-send-backward-kill-word)
+         (cons "M-d" 'term-send-forward-kill-word)
+         (cons "C-r" 'term-send-reverse-search-history)
+         (cons "M-p" 'term-send-raw-meta)
+         (cons "M-y" 'term-send-raw-meta)
+         (cons "s-v" 'term-paste)
+         (cons "C-y" 'term-paste))))
 
-;; makes shift-up work in a terminal
-(define-key input-decode-map "\e[1;2A" [S-up])
 
 ;; resizing windows
 (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
@@ -94,17 +107,17 @@
 
 ;; chat
 (setq jabber-account-list
-     '(("at@zestfinance.com"
-     (:network-server . "talk.google.com")
-     (:connection-type . ssl)
-     (:port . 443))))
+      '(("at@zestfinance.com"
+         (:network-server . "talk.google.com")
+         (:connection-type . ssl)
+         (:port . 443))))
 (add-hook 'jabber-chat-mode-hook 'flyspell-mode)
 
 ;; email
 (setq gnus-select-method '(nnimap "gmail"
-				  (nnimap-address "imap.gmail.com")
-				  (nnimap-server-port 993)
-				  (nnimap-stream ssl)))
+                                  (nnimap-address "imap.gmail.com")
+                                  (nnimap-server-port 993)
+                                  (nnimap-stream ssl)))
 (setq message-send-mail-function 'smtpmail-send-it
       user-mail-address "at@zestfinance.com"
       smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil))
@@ -116,14 +129,17 @@
       smtpmail-debug-info t)
 (setq gnus-posting-styles
       '((".*"
-	 (name "Alexader Tamoykin")
-	 (address "at@zestfinance.com"))))
+         (name "Alexader Tamoykin")
+         (address "at@zestfinance.com"))))
 (add-hook 'message-mode-hook 'flyspell-mode)
 
 ;; address book
 (require 'google-contacts)
 (require 'google-contacts-gnus)
 (require 'google-contacts-message)
+
+;; nuke whitespaces when writing to a file
+(add-hook 'before-save-hook 'whitespace-cleanup)
 
 ;; customization
 (set-face-attribute 'default nil :height 190)
