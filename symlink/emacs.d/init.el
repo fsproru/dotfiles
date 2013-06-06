@@ -124,7 +124,7 @@
 (setq message-send-mail-function 'smtpmail-send-it
       user-mail-address "at@zestfinance.com"
       smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil))
-      smtpmail-auth-credentials '(("smtp.gmail.com" 587 "at@zestfinance.com" nil))
+      smtpmail-auth-credentials "~/.authinfo.gpg"
       smtpmail-default-smtp-server "smtp.gmail.com"
       smtpmail-smtp-server "smtp.gmail.com"
       smtpmail-smtp-service 587
