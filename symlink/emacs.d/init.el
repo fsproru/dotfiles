@@ -60,20 +60,21 @@
 (require 'multi-term)
 (setq multi-term-program "/bin/bash")
 (setq multi-term-dedicated-select-after-open-p t)
+(global-set-key (kbd "<f8>") 'multi-term-dedicated-toggle)
+(global-set-key (kbd "<f7>") 'multi-term-next)
+(global-set-key (kbd "<f9>") 'multi-term-prev)
+(global-set-key (kbd "<f6>") 'multi-term)
 
 ;; term key bindings
 (when (require 'term nil t)
-  (global-set-key (kbd "<f8>") 'multi-term-dedicated-toggle)
-  (global-set-key (kbd "<f7>") 'multi-term-next)
-  (global-set-key (kbd "<f9>") 'multi-term-prev)
-  (global-set-key (kbd "<f6>") 'multi-term)
-
   (setq term-bind-key-alist
         (list (cons "C-c C-c" 'term-interrupt-subjob)
          (cons "C-p" 'previous-line)
          (cons "C-n" 'next-line)
          (cons "M-f" 'term-send-forward-word)
          (cons "M-b" 'term-send-backward-word)
+         (cons "M-<left>" 'term-send-backward-word)
+         (cons "M-<right>" 'term-send-forward-word)
          (cons "C-c C-j" 'term-line-mode)
          (cons "C-c C-k" 'term-char-mode)
          (cons "M-DEL" 'term-send-backward-kill-word)
@@ -97,6 +98,8 @@
 (global-set-key (kbd "s-<right>")     (kbd "C-e"))
 (global-set-key (kbd "s-<left>")      (kbd "C-a"))
 (global-set-key (kbd "s-<backspace>") (kbd "C-a C-k"))
+(global-set-key (kbd "S-s-<right>")   (kbd "S-C-e"))
+(global-set-key (kbd "S-s-<left>")    (kbd "S-C-a"))
 
 ;; stop annoying beeping
 (setq ring-bell-function 'ignore)
