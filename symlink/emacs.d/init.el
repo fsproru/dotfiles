@@ -1,6 +1,6 @@
-;;----------------------------------------;;
-;; This is the first thing to get loaded. ;;
-;; ---------------------------------------;;
+;;-------------------------------------------;;
+;; This is the first thing that gets loaded. ;;
+;; ------------------------------------------;;
 
 ;; elpa package manager
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
@@ -59,11 +59,8 @@
 ;; multi-term
 (require 'multi-term)
 (setq multi-term-program "/bin/bash")
-(setq multi-term-dedicated-select-after-open-p t)
-(global-set-key (kbd "<f8>") 'multi-term-dedicated-toggle)
-(global-set-key (kbd "<f7>") 'multi-term-next)
-(global-set-key (kbd "<f9>") 'multi-term-prev)
-(global-set-key (kbd "<f6>") 'multi-term)
+(global-set-key (kbd "<f6>") 'multi-term) ;; create a new nerminal
+(global-set-key (kbd "<f8>") 'multi-term-next) ;; next terminal
 
 ;; term key bindings
 (when (require 'term nil t)
@@ -85,7 +82,6 @@
          (cons "s-v" 'term-paste)
          (cons "C-y" 'term-paste))))
 
-
 ;; resizing windows
 (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
 (global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
@@ -104,42 +100,13 @@
 ;; stop annoying beeping
 (setq ring-bell-function 'ignore)
 
+;; enable ido-mode
+(ido-mode t)
+(setq ido-ignore-extensions t)
+
 ;; expand tabs
 (setq standard-indent 2)
 (setq-default indent-tabs-mode nil)
-
-;; chat
-(setq jabber-account-list
-      '(("at@zestfinance.com"
-         (:network-server . "talk.google.com")
-         (:connection-type . ssl)
-         (:port . 443))))
-(add-hook 'jabber-chat-mode-hook 'flyspell-mode)
-
-;; email
-(setq gnus-select-method '(nnimap "gmail"
-                                  (nnimap-address "imap.gmail.com")
-                                  (nnimap-server-port 993)
-                                  (nnimap-stream ssl)))
-(setq message-send-mail-function 'smtpmail-send-it
-      user-mail-address "at@zestfinance.com"
-      smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil))
-      smtpmail-auth-credentials "~/.authinfo.gpg"
-      smtpmail-default-smtp-server "smtp.gmail.com"
-      smtpmail-smtp-server "smtp.gmail.com"
-      smtpmail-smtp-service 587
-      smtpmail-local-domain "zestfinance.com"
-      smtpmail-debug-info t)
-(setq gnus-posting-styles
-      '((".*"
-         (name "Alexader Tamoykin")
-         (address "at@zestfinance.com"))))
-(add-hook 'message-mode-hook 'flyspell-mode)
-
-;; address book
-(require 'google-contacts)
-(require 'google-contacts-gnus)
-(require 'google-contacts-message)
 
 ;; nuke whitespaces when writing to a file
 (add-hook 'before-save-hook 'whitespace-cleanup)
@@ -152,11 +119,13 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(blink-cursor-mode nil)
+ '(completion-ignored-extensions (quote (".o" "~" ".bin" ".lbin" ".so" ".a" ".ln" ".blg" ".bbl" ".elc" ".lof" ".glo" ".idx" ".lot" ".svn/" ".hg/" ".git/" ".bzr/" "CVS/" "_darcs/" "_MTN/" ".fmt" ".tfm" ".class" ".fas" ".lib" ".mem" ".x86f" ".sparcf" ".dfsl" ".pfsl" ".d64fsl" ".p64fsl" ".lx64fsl" ".lx32fsl" ".dx64fsl" ".dx32fsl" ".fx64fsl" ".fx32fsl" ".sx64fsl" ".sx32fsl" ".wx64fsl" ".wx32fsl" ".fasl" ".ufsl" ".fsl" ".dxl" ".lo" ".la" ".gmo" ".mo" ".toc" ".aux" ".cp" ".fn" ".ky" ".pg" ".tp" ".vr" ".cps" ".fns" ".kys" ".pgs" ".tps" ".vrs" ".pyc" ".pyo" "vendor/bundle" "jmeter" ".plugins" "db/migrate")))
+ '(display-time-default-load-average nil)
  '(display-time-mode t)
  '(grep-find-ignored-directories (quote ("SCCS" "RCS" "CVS" "MCVS" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" "log" "vendor/bundle" ".idea" "coverage" "jmeter")))
- '(jabber-alert-presence-hooks nil)
- '(jabber-auto-reconnect t)
+ '(ido-ignore-directories (quote ("\\`CVS/" "\\`\\.\\./" "\\`\\./" "\\`vendor/bundle" "\\`\\.git/")))
  '(password-cache-expiry 604800)
+ '(rspec-use-rake-flag nil)
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil))
 (custom-set-faces
