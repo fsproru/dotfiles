@@ -45,9 +45,11 @@ setup() {
 z() {
   cd ~/Documents/projects/zest/$1
 }
+complete -W "$(ls ~/Documents/projects/zest)" z
 
 f() {
   cd ~/Documents/projects/fsproru/$1
 }
+complete -W "$(ls ~/Documents/projects/fsproru)" f
 
 # vim ft=sh
