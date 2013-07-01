@@ -2,6 +2,7 @@
 --langdef=coffee
 --langmap=coffee:.coffee.eco.slim.scss.haml.builder.yml.yaml.ejs.example
 --extra=+f
+-e
 --exclude=log
 --exclude=tmp
 --exclude=.git
