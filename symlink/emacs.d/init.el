@@ -52,9 +52,15 @@
   (exec-path-from-shell-initialize)
   (exec-path-from-shell-copy-env "EPHRASE"))
 
-;; flymake ruby
+;; ruby
 (require 'flymake-ruby)
 (add-hook 'ruby-mode-hook 'flymake-ruby-load)
+(add-to-list 'auto-mode-alist '("Rakefile"    . ruby-mode))
+(add-to-list 'auto-mode-alist '("Gemfile"     . ruby-mode))
+(add-to-list 'auto-mode-alist '("Vagrantfile" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.rake$"    . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
+
 
 ;; multi-term
 (require 'multi-term)
