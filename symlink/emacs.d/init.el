@@ -53,14 +53,12 @@
   (exec-path-from-shell-copy-env "EPHRASE"))
 
 ;; ruby
-(require 'flymake-ruby)
 (add-hook 'ruby-mode-hook 'flymake-ruby-load)
 (add-to-list 'auto-mode-alist '("Rakefile"    . ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile"     . ruby-mode))
 (add-to-list 'auto-mode-alist '("Vagrantfile" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.rake$"    . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
-
 
 ;; multi-term
 (require 'multi-term)
@@ -103,16 +101,29 @@
 (global-set-key (kbd "S-s-<right>")   (kbd "S-C-e"))
 (global-set-key (kbd "S-s-<left>")    (kbd "S-C-a"))
 
+;; other mappings
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+(define-key global-map (kbd "RET") 'newline-and-indent)
+
 ;; stop annoying beeping
 (setq ring-bell-function 'ignore)
 
 ;; enable ido-mode
 (ido-mode t)
 (setq ido-ignore-extensions t)
+(setq ido-enable-flex-matching t)
+
+;; find file in project
+(projectile-global-mode)
+(global-set-key (kbd "C-x f") 'projectile-find-file)
 
 ;; expand tabs
 (setq standard-indent 2)
 (setq-default indent-tabs-mode nil)
+(setq js-indent-level 2)
+
+;; replace highlighted text by typing
+(delete-selection-mode t)
 
 ;; nuke whitespaces when writing to a file
 (add-hook 'before-save-hook 'whitespace-cleanup)
@@ -130,7 +141,6 @@
  '(display-time-mode t)
  '(grep-find-ignored-directories (quote ("SCCS" "RCS" "CVS" "MCVS" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" "log" "vendor/bundle" ".idea" "coverage" "jmeter")))
  '(ido-ignore-directories (quote ("\\`CVS/" "\\`\\.\\./" "\\`\\./" "\\`vendor/bundle" "\\`\\.git/")))
- '(password-cache-expiry 604800)
  '(rspec-use-rake-flag nil)
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil))
