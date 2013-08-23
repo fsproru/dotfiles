@@ -5,6 +5,7 @@ alias ll="ls -lha"
 alias flushdns='dscacheutil -flushcache'
 alias tmuxcopy='tmux show-buffer | pbcopy'
 alias e='emacsclient --no-wait'
+alias vim=e # old habbits
 
 # Repeat a command multiple times
 function repeat() {

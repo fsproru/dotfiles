@@ -15,7 +15,7 @@ if [ -d "$HOME/.plugins" ]; then
   source ~/.plugins/git-completion.bash
   source ~/.plugins/git-prompt.sh
   export PS1='[\W]$(__git_ps1 "(%s)"): '
-  
+
   #Custoimized Prompt
   GREEN="\[\033[0;32m\]"
   LIGHT_GRAY="\[\033[0;37m\]"
