@@ -68,6 +68,10 @@
 
 ;; term key bindings
 (when (require 'term nil t)
+  (defun term-send-escape ()
+    (interactive)
+    (term-send-raw-string "\e"))
+
   (setq term-bind-key-alist
         (list (cons "C-c C-c" 'term-interrupt-subjob)
          (cons "C-p" 'previous-line)
@@ -84,7 +88,8 @@
          (cons "M-p" 'term-send-raw-meta)
          (cons "M-y" 'term-send-raw-meta)
          (cons "s-v" 'term-paste)
-         (cons "C-y" 'term-paste))))
+         (cons "C-y" 'term-paste)
+         (cons "<ESC>" 'term-send-escape))))
 
 ;; resizing windows
 (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
