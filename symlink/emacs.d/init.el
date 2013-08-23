@@ -109,6 +109,7 @@
 ;; other mappings
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (define-key global-map (kbd "RET") 'newline-and-indent)
+(define-key isearch-mode-map (kbd "s-v") 'isearch-yank-kill)
 
 ;; stop annoying beeping
 (setq ring-bell-function 'ignore)
