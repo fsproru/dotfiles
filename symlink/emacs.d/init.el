@@ -8,7 +8,7 @@
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 (package-initialize)
 
-;; enable mouse
+;; mouse
 (require 'mouse)
 (xterm-mouse-mode t)
 (defun track-mouse (e))
@@ -19,6 +19,11 @@
 (global-set-key [mouse-5] '(lambda ()
                             (interactive)
                             (scroll-up 1)))
+;; scroll one line at a time (less "jumpy" than defaults)
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
+(setq mouse-wheel-progressive-speed nil)
+(setq mouse-wheel-follow-mouse 't)
+(setq scroll-step 1)
 
 ;; color theme
 (load-theme 'solarized-dark t)
@@ -82,7 +87,7 @@
          (cons "M-<right>" 'term-send-forward-word)
          (cons "C-c C-j" 'term-line-mode)
          (cons "C-c C-k" 'term-char-mode)
-         (cons "M-DEL" 'term-send-backward-kill-word)
+         (cons "<M-backspace>" 'term-send-backward-kill-word)
          (cons "M-d" 'term-send-forward-kill-word)
          (cons "C-r" 'term-send-reverse-search-history)
          (cons "M-p" 'term-send-raw-meta)
