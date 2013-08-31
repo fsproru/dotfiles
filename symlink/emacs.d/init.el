@@ -73,9 +73,21 @@
 
 ;; term key bindings
 (when (require 'term nil t)
+  ;; for emacs runnning inside term
   (defun term-send-escape ()
     (interactive)
     (term-send-raw-string "\e"))
+  (defun term-send-c-x ()
+    (interactive)
+    (term-send-raw-string "\C-x"))
+  (defun term-send-c-x-c-s ()
+    (interactive)
+    (funcall 'term-send-c-x)
+    (term-send-raw-string "\C-s"))
+  (defun term-send-c-x-c-c ()
+    (interactive)
+    (funcall 'term-send-c-x)
+    (term-send-raw-string "\C-c"))
 
   (setq term-bind-key-alist
         (list (cons "C-c C-c" 'term-interrupt-subjob)
@@ -94,6 +106,8 @@
          (cons "M-y" 'term-send-raw-meta)
          (cons "s-v" 'term-paste)
          (cons "C-y" 'term-paste)
+         (cons "C-x C-s" 'term-send-c-x-c-s)
+         (cons "C-x C-c" 'term-send-c-x-c-c)
          (cons "<ESC>" 'term-send-escape))))
 
 ;; resizing windows
