@@ -12,3 +12,5 @@
 --exclude=jmeter
 --exclude=public/vendor
 --exclude=coverage
+--exclude=*.html
+--exclude=*.js
