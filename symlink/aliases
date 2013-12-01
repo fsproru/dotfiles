@@ -5,7 +5,6 @@ alias ll="ls -lha"
 alias flushdns='dscacheutil -flushcache'
 alias tmuxcopy='tmux show-buffer | pbcopy'
 alias e='emacsclient --no-wait'
-alias vim=e # old habbits
 
 # Repeat a command multiple times
 function repeat() {
@@ -40,7 +39,7 @@ alias gc='git commit'
 # setup
 setup() {
   gemi git-smart simple-git-pair rbenv-rehash teamocil
-  brew install wemux
+  brew install tmux wemux
 }
 
 z() {
