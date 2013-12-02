@@ -56,9 +56,15 @@
 (global-set-key (kbd "<f6>") 'multi-term) ;; create a new nerminal
 (global-set-key (kbd "<f8>") 'multi-term-next) ;; next terminal
 
-;; term key bindings
+;; term-mode
 (when (require 'term nil t)
-  ;; for emacs runnning inside term
+  ;; display unicode chars
+  (add-hook 'term-exec-hook
+          (function
+           (lambda ()
+             (set-buffer-process-coding-system 'utf-8-unix 'utf-8-unix))))
+
+  ;; for emacs runnning inside term-mode buffer
   (defun term-send-escape ()
     (interactive)
     (term-send-raw-string "\e"))
