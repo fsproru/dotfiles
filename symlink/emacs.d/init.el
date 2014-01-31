@@ -87,7 +87,7 @@
          (cons "M-<right>" 'term-send-forward-word)
          (cons "C-c C-j" 'term-line-mode)
          (cons "C-c C-k" 'term-char-mode)
-         (cons "<M-backspace>" 'term-send-backward-kill-word)
+         (cons "M-<DEL>" 'term-send-backward-kill-word)
          (cons "M-d" 'term-send-forward-kill-word)
          (cons "C-r" 'term-send-reverse-search-history)
          (cons "M-p" 'term-send-raw-meta)
@@ -95,8 +95,7 @@
          (cons "s-v" 'term-paste)
          (cons "C-y" 'term-paste)
          (cons "C-x C-s" 'term-send-c-x-c-s)
-         (cons "C-x C-c" 'term-send-c-x-c-c)
-         )))
+         (cons "C-x C-c" 'term-send-c-x-c-c))))
 
 ;; resizing windows
 (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
@@ -109,7 +108,7 @@
 (global-set-key (kbd "s-<up>")        (kbd "M-<"))
 (global-set-key (kbd "s-<right>")     (kbd "C-e"))
 (global-set-key (kbd "s-<left>")      (kbd "C-a"))
-(global-set-key (kbd "s-<backspace>") (kbd "C-a C-k"))
+(global-set-key (kbd "s-<DEL>")       (kbd "C-a C-k"))
 (global-set-key (kbd "S-s-<right>")   (kbd "S-C-e"))
 (global-set-key (kbd "S-s-<left>")    (kbd "S-C-a"))
 (global-set-key (kbd "M-s-<down>")    'windmove-down)
