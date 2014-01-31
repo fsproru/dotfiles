@@ -14,3 +14,6 @@
 --exclude=coverage
 --exclude=*.html
 --exclude=*.js
+--exclude=*~
+--exclude=\#*\#
+--exclude=\.\#*
