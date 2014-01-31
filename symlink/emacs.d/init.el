@@ -65,9 +65,6 @@
              (set-buffer-process-coding-system 'utf-8-unix 'utf-8-unix))))
 
   ;; for emacs runnning inside term-mode buffer
-  (defun term-send-escape ()
-    (interactive)
-    (term-send-raw-string "\e"))
   (defun term-send-c-x ()
     (interactive)
     (term-send-raw-string "\C-x"))
@@ -99,7 +96,7 @@
          (cons "C-y" 'term-paste)
          (cons "C-x C-s" 'term-send-c-x-c-s)
          (cons "C-x C-c" 'term-send-c-x-c-c)
-         (cons "<ESC>" 'term-send-escape))))
+         )))
 
 ;; resizing windows
 (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
