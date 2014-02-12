@@ -42,14 +42,16 @@ setup() {
   brew install tmux wemux
 }
 
-z() {
-  cd ~/Documents/projects/zest/$1
-}
-complete -W "$(ls ~/Documents/projects/zest)" z
+if [ -d "$HOME/Documents/projects" ]; then
+  z() {
+    cd ~/Documents/projects/zest/$1
+  }
+  complete -W "$(ls ~/Documents/projects/zest)" z
 
-f() {
-  cd ~/Documents/projects/fsproru/$1
-}
-complete -W "$(ls ~/Documents/projects/fsproru)" f
+  f() {
+    cd ~/Documents/projects/fsproru/$1
+  }
+  complete -W "$(ls ~/Documents/projects/fsproru)" f
+fi
 
 # vim ft=sh
