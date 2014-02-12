@@ -6,6 +6,8 @@ export RUBYOPT=rubygems    # so I can use gems in raw scripts
 export PATH=~/.bin:$PATH
 export CFLAGS="-I/opt/X11/include" # ruby 1.8.7 needs X11 to build
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH # look for brew packages first
+export PGDATA=/usr/local/var/postgres
+export PGHOST=localhost
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   source $(brew --prefix)/etc/bash_completion
