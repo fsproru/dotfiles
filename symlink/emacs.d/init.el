@@ -145,5 +145,6 @@
 (add-hook 'before-save-hook 'whitespace-cleanup)
 
 ;; customizing customization
-(setq custom-file "~/.emacs.d/customization.el")
+(setq at-emacs-config-dir (file-name-directory load-file-name))
+(setq custom-file (expand-file-name "customization.el" at-emacs-config-dir))
 (load custom-file)
