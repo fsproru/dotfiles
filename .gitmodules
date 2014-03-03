@@ -7,3 +7,6 @@
 [submodule "symlink/plugins/ssh-find-agent"]
 	path = symlink/plugins/ssh-find-agent
 	url = git://github.com/wwalker/ssh-find-agent.git
+[submodule "symlink/cask"]
+	path = symlink/cask
+	url = git@github.com:cask/cask.git
