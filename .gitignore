@@ -1,3 +1,4 @@
 symlink/emacs.d/auto-save-list/*
 symlink/emacs.d/url/*
 symlink/emacs.d/projectile-bookmarks.eld
+symlink/emacs.d/.cask/*
