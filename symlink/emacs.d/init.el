@@ -4,6 +4,7 @@
 
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
+(require 'pallet)
 
 ;; mouse
 (require 'mouse)
