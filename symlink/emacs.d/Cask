@@ -15,6 +15,7 @@
 (depends-on "flymake-ruby")
 (depends-on "htmlize")
 (depends-on "inf-mongo")
+(depends-on "init-loader")
 (depends-on "markdown-mode")
 (depends-on "multi-term")
 (depends-on "oauth2")
