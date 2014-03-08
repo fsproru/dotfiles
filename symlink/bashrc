@@ -4,9 +4,10 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi # rbenv init
 export CC=/usr/bin/gcc-4.2 # needed to build rubies
 export RUBYOPT=rubygems    # so I can use gems in raw scripts
 export CFLAGS="-I/opt/X11/include" # ruby 1.8.7 needs X11 to build
-export PATH=/usr/local/bin:/usr/local/sbin:~/.cask/bin:~/.bin:$PATH
 export PGDATA=/usr/local/var/postgres
 export PGHOST=localhost
+export GOPATH=$HOME/Documents/projects/fsproru/go
+export PATH=/usr/local/bin:/usr/local/sbin:~/.cask/bin:~/.bin:$GOPATH/bin:$PATH
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   source $(brew --prefix)/etc/bash_completion

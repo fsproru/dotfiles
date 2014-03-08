@@ -13,6 +13,7 @@
 (depends-on "feature-mode")
 (depends-on "flymake-easy")
 (depends-on "flymake-ruby")
+(depends-on "go-mode")
 (depends-on "htmlize")
 (depends-on "inf-mongo")
 (depends-on "init-loader")
