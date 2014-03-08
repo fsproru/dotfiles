@@ -27,4 +27,5 @@
 (depends-on "rhtml-mode")
 (depends-on "rspec-mode")
 (depends-on "s")
+(depends-on "slim-mode")
 (depends-on "yaml-mode")
