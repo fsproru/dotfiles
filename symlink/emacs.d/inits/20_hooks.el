@@ -6,5 +6,5 @@
 (add-to-list 'auto-mode-alist '("\\.rake$"    . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
 
-;; nuke whitespaces when writing to a file
 (add-hook 'before-save-hook 'whitespace-cleanup)
+(add-hook 'markdown-mode-hook 'flyspell-mode)
