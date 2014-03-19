@@ -8,3 +8,4 @@
 
 (add-hook 'before-save-hook 'whitespace-cleanup)
 (add-hook 'markdown-mode-hook 'flyspell-mode)
+(add-hook 'prog-mode-hook 'yas-minor-mode-on)

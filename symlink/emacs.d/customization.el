@@ -18,7 +18,8 @@
  '(rspec-use-rake-when-possible nil)
  '(scroll-bar-mode nil)
  '(sh-indentation 2)
- '(tool-bar-mode nil))
+ '(tool-bar-mode nil)
+ '(yas-global-mode nil nil (yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
