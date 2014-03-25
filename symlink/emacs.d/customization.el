@@ -16,10 +16,11 @@
  '(menu-bar-mode nil)
  '(rspec-use-rake-flag nil)
  '(rspec-use-rake-when-possible nil)
+ '(safe-local-variable-values (quote ((require-final-newline))))
  '(scroll-bar-mode nil)
  '(sh-indentation 2)
  '(tool-bar-mode nil)
- '(yas-global-mode nil nil (yasnippet)))
+ '(yas-global-mode t nil (yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
