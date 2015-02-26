@@ -9,6 +9,7 @@
  '(display-time-default-load-average nil)
  '(display-time-mode t)
  '(grep-find-ignored-directories (quote ("SCCS" "RCS" "CVS" "MCVS" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" "log" "vendor/bundle" ".idea" "coverage" "jmeter")))
+ '(ido-auto-merge-work-directories-length -1)
  '(ido-enable-flex-matching t)
  '(ido-ignore-directories (quote ("\\`CVS/" "\\`\\.\\./" "\\`\\./" "\\`vendor/bundle" "\\`\\.git/")))
  '(ido-ignore-extensions t)
