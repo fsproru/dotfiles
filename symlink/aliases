@@ -6,20 +6,6 @@ alias flushdns='dscacheutil -flushcache'
 alias tmuxcopy='tmux show-buffer | pbcopy'
 alias e='emacsclient --no-wait'
 
-# Repeat a command multiple times
-function repeat() {
-  if [[ $1 == "--help" || $1 == "-h" || $1 == "" ]]; then
-    echo "Usage: repeat <n-times> <command>"
-  else
-    n=$1
-    shift
-    while [ $(( n -= 1 )) -ge 0 ]
-    do
-      "$@"
-    done
-  fi
-}
-
 # Bundler
 alias be="bundle exec"
 alias bi="bundle install"
@@ -35,23 +21,5 @@ alias gd='git diff'
 alias gdc='git diff --cached'
 alias gap='git add -p'
 alias gc='git commit'
-
-# setup
-setup() {
-  gemi git-smart simple-git-pair rbenv-rehash teamocil
-  brew install tmux wemux
-}
-
-if [ -d "$HOME/Documents/projects" ]; then
-  z() {
-    cd ~/Documents/projects/zest/$1
-  }
-  complete -W "$(ls ~/Documents/projects/zest)" z
-
-  f() {
-    cd ~/Documents/projects/fsproru/$1
-  }
-  complete -W "$(ls ~/Documents/projects/fsproru)" f
-fi
 
 # vim ft=sh

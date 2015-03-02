@@ -34,11 +34,6 @@ if [ -e "$HOME/.aliases" ]; then
   source "$HOME/.aliases"
 fi
 
-# zestsecrets
-if [ -e "$HOME/.zestsecrets" ]; then
-  source "$HOME/.zestsecrets"
-fi
-
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
