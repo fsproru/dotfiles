@@ -1,16 +1,13 @@
 [alias]
+  ci = duet-commit
+  commit = duet-commit
   st = status
-  sp = smart-pull
-  padd = add -p
   co = checkout
-  graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   lol = log --pretty=oneline --abbrev-commit --graph --decorate
   unpushed = !"PROJ_BRANCH=$(git symbolic-ref HEAD | sed 's|refs/heads/||') && git log origin/$PROJ_BRANCH..HEAD"
   unpulled = !"PROJ_BRANCH=$(git symbolic-ref HEAD | sed 's|refs/heads/||') && git fetch && git log HEAD..origin/$PROJ_BRANCH"
-  ctags = !.git/hooks/ctags
-  dc = diff --cached
+  ds = diff --cached
   current-branch = !git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'
-  author = !"git config user.name 'Alexander Tamoykin' && git config user.email 'at@zestcash.com'"
 [push]
   default = tracking
 [color]
@@ -42,10 +39,5 @@
   autocorrect = 0
 [status]
   submodule = 1
-[push]
-  default = current
-[user]
-	name = Alexander Tamoykin
-	email = at@zestcash.com
 
 # vim: ft=gitconfig
