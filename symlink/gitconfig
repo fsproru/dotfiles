@@ -29,8 +29,6 @@
   branch = magenta
 [core]
   excludesfile = ~/.gitignore
-[init]
-  templatedir = ~/.git_template
 [format]
   pretty = %Cblue%h%Creset %Cgreen[%ar]%Creset (%an) %s
 [apply]
