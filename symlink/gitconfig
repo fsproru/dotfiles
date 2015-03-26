@@ -1,4 +1,5 @@
 [alias]
+  br = branch
   ci = duet-commit
   commit = duet-commit
   st = status
