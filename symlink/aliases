@@ -22,4 +22,7 @@ alias gdc='git diff --cached'
 alias gap='git add -p'
 alias gc='git commit'
 
+# Alias git to hub
+alias git=hub
+
 # vim ft=sh
