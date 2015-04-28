@@ -36,4 +36,11 @@ else
   ln -s $HOME/.$iterm_file $iterm_path
 fi
 
+echo "=== Linking Sublime Text 3 preferences"
+sublime_prefs_path=$HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+
+if [ -e $iterm_path ]; then
+  ln -s $dotfile_path/symlink/sublime/* sublime_prefs_path
+fi
+
 echo === Done
