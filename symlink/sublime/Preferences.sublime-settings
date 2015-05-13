@@ -1,0 +1,13 @@
+{
+	"color_scheme": "Packages/Theme - Spacegray/base16-eighties.dark.tmTheme",
+	"font_face": "Menlo",
+	"font_size": 15,
+	"trim_trailing_white_space_on_save": false,
+	"ensure_newline_at_eof_on_save": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"save_on_focus_lost": true,
+	"theme": "Spacegray Eighties.sublime-theme"
+}
