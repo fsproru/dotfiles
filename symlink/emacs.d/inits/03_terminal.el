@@ -29,10 +29,6 @@
     "Previous input parameter in the terminal"
     (interactive)
     (term-send-raw-string "\e."))
-  ;; fun for a later date
-  ;; (defun term-send-raw-whatever (whatever)
-  ;;   (interactive "sText to send: ")
-  ;;   (term-send-raw-string whatever))
 
   (setq term-bind-key-alist
         (list (cons "C-c C-c" 'term-interrupt-subjob)
