@@ -23,3 +23,5 @@
 (depends-on "yaml-mode")
 (depends-on "yasnippet")
 (depends-on "swift-mode")
+(depends-on "php-mode")
+(depends-on "mmm-mode")
