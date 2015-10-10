@@ -17,6 +17,10 @@ export LANG=en_US.UTF-8
 # pass <C-s> and other terminal keys to vim
 stty -ixon
 
+if [ -f ~/.aliases ]; then
+  . ~/.aliases
+fi
+
 GIT_DUET_GLOBAL=true
 
 # Path to the bash it configuration
