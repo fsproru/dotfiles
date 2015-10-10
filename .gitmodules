@@ -7,3 +7,6 @@
 [submodule "symlink/cask"]
 	path = symlink/cask
 	url = git@github.com:cask/cask.git
+[submodule "symlink/bash_it"]
+	path = symlink/bash_it
+	url = git@github.com:Bash-it/bash-it.git

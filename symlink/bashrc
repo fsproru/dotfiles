@@ -1,34 +1,26 @@
 #!/bin/bash
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi # rbenv init
-export RUBYOPT=rubygems    # so I can use gems in raw scripts
 export PGDATA=/usr/local/var/postgres
 export PGHOST=localhost
 export GOPATH=$HOME/Documents/projects/fsproru/go
 export PATH=/usr/local/bin:/usr/local/sbin:~/.cask/bin:~/.bin:$GOPATH/bin:$PATH
 
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  source $(brew --prefix)/etc/bash_completion
-fi
-
-# aliases
-if [ -e "$HOME/.aliases" ]; then
-  source "$HOME/.aliases"
-fi
-
-export CLICOLOR=1
-export LSCOLORS=ExFxCxDxBxegedabagacad
-
 export ALTERNATE_EDITOR=emacs EDITOR=emacsclient VISUAL=emacsclient
 export GIT_EDITOR=/usr/local/bin/emacsclient
 
 export HISTCONTROL=ignoredups
-
 shopt -s histappend
-PROMPT_COMMAND='history -a'
 
-export CLICOLOR=1
 export LANG=en_US.UTF-8
 
 # pass <C-s> and other terminal keys to vim
 stty -ixon
+
+# Path to the bash it configuration
+export BASH_IT="$HOME/.bash_it"
+export BASH_IT_THEME='bobby'
+
+
+# Load Bash It
+source $BASH_IT/bash_it.sh
