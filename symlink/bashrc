@@ -23,9 +23,9 @@ fi
 
 GIT_DUET_GLOBAL=true
 
-# Path to the bash it configuration
+# bash-it
 export BASH_IT="$HOME/.bash_it"
 export BASH_IT_THEME='bobby'
-
-# Load Bash It
+export THEME_CLOCK_CHECK=false
+export THEME_BATTERY_PERCENTAGE_CHECK=false
 source $BASH_IT/bash_it.sh
