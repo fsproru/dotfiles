@@ -17,10 +17,11 @@ export LANG=en_US.UTF-8
 # pass <C-s> and other terminal keys to vim
 stty -ixon
 
+GIT_DUET_GLOBAL=true
+
 # Path to the bash it configuration
 export BASH_IT="$HOME/.bash_it"
 export BASH_IT_THEME='bobby'
-
 
 # Load Bash It
 source $BASH_IT/bash_it.sh
