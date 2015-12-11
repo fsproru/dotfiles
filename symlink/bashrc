@@ -21,6 +21,17 @@ if [ -f ~/.aliases ]; then
   . ~/.aliases
 fi
 
+setup_teamocil_autocompletion() {
+  complete -W "$(teamocil --list)" teamocil
+}
+
+if which teamocil >> /dev/null; then
+  setup_teamocil_autocompletion
+else
+  gem install teamocil
+  setup_teamocil_autocompletion
+fi
+
 export GIT_DUET_GLOBAL=true
 
 # bash-it
