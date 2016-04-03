@@ -4,3 +4,4 @@ symlink/emacs.d/projectile-bookmarks.eld
 symlink/emacs.d/.cask/*
 symlink/emacs.d/eshell/history
 symlink/emacs.d/eshell/lastdir
+symlink/emacs.d/projectile.cache
