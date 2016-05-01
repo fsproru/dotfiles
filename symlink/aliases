@@ -22,6 +22,9 @@ alias gdc='git diff --cached'
 alias gap='git add -p'
 alias gc='git commit'
 
+# Code highlighting
+alias highlight_pastebuffer='pbpaste | highlight --syntax=ruby --style=solarized-dark --out-format=rtf | pbcopy'
+
 # Alias git to hub
 alias git=hub
 
