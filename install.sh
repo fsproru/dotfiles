@@ -3,6 +3,7 @@
 current_dir=$(dirname $0)
 dotfiles_path=$PWD/$current_dir
 vimfiles_path=$dotfiles_path/vimfiles
+emacs_dir=$dotfiles_path/symlink/emacs.d
 
 echo "=== Initializing git submodules"
 git submodule update --init
@@ -42,5 +43,10 @@ sublime_prefs_path=$HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/
 if [ -e $iterm_path ]; then
   ln -s $dotfile_path/symlink/sublime/* $sublime_prefs_path
 fi
+
+echo "=== Installing Cask Packages for Emacs"
+cd $emacs_dir
+cask install
+cd -
 
 echo === Done
