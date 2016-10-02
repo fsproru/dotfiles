@@ -5,6 +5,7 @@ alias ll="ls -lha"
 alias flushdns='dscacheutil -flushcache'
 alias tmuxcopy='tmux show-buffer | pbcopy'
 alias e='emacsclient --no-wait'
+function mcd () { mkdir -p "$@" && cd "$_"; }
 
 # Bundler
 alias be="bundle exec"
@@ -22,10 +23,10 @@ alias gdc='git diff --cached'
 alias gap='git add -p'
 alias gc='git commit'
 
-# Code highlighting
-alias highlight_pastebuffer='pbpaste | highlight --syntax=ruby --style=solarized-dark --out-format=rtf | pbcopy'
-
 # Alias git to hub
 alias git=hub
+
+# Code highlighting
+alias highlight_pastebuffer='pbpaste | highlight --syntax=ruby --style=solarized-dark --out-format=rtf | pbcopy'
 
 # vim ft=sh
