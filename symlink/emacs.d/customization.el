@@ -20,6 +20,7 @@
     ("\\`CVS/" "\\`\\.\\./" "\\`\\./" "\\`vendor/bundle" "\\`\\.git/")))
  '(ido-ignore-extensions t)
  '(ido-mode nil nil (ido))
+ '(js2-basic-offset 2)
  '(menu-bar-mode nil)
  '(rspec-use-rake-flag nil)
  '(rspec-use-rake-when-possible nil)

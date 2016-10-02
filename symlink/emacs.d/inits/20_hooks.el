@@ -9,6 +9,9 @@
 (add-to-list 'auto-mode-alist '("\\.rake$"    . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
 
+;; TODO: Try out js-mode when emacs 25 comes out
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+
 (add-hook 'before-save-hook 'whitespace-cleanup)
 (add-hook 'markdown-mode-hook 'flyspell-mode)
 (add-hook 'prog-mode-hook 'yas-minor-mode-on)
