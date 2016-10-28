@@ -5,6 +5,7 @@
 (depends-on "cask")
 (depends-on "coffee-mode")
 (depends-on "js2-mode")
+(depends-on "csharp-mode")
 (depends-on "color-theme")
 (depends-on "color-theme-solarized")
 (depends-on "feature-mode")
