@@ -4,7 +4,6 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi # rbenv init
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi # pyenv init
 export PGDATA=/usr/local/var/postgres
 export PGHOST=localhost
-export GOPATH=$HOME/code/go
 export PATH=/usr/local/bin:/usr/local/sbin:~/.cask/bin:~/.bin:$GOPATH/bin:$PATH
 
 export ALTERNATE_EDITOR=emacs EDITOR=emacsclient VISUAL=emacsclient
