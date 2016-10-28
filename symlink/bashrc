@@ -1,6 +1,7 @@
 #!/bin/bash
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi # rbenv init
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi # pyenv init
 export PGDATA=/usr/local/var/postgres
 export PGHOST=localhost
 export GOPATH=$HOME/code/go
