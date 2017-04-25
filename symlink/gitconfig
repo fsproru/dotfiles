@@ -39,3 +39,10 @@
   submodule = 1
 
 # vim: ft=gitconfig
+[user]
+	name = Alex Tamoykin
+	email = alex@rightbalance.io
+[duet "env"]
+	git-author-name = Alex Tamoykin
+	git-author-email = alex@rightbalance.io
+	mtime = 1493100088
