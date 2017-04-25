@@ -1,4 +1,4 @@
-#dotfiles
+# dotfiles
 Collection of UNIX configuration files.
 
 Feel free to [fork it](https://github.com/fsproru/dotfiles/fork_select) and use it. [Why fork?](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/)
