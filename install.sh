@@ -37,16 +37,21 @@ else
   ln -s $HOME/.$iterm_file $iterm_path
 fi
 
-echo "=== Linking Sublime Text 3 preferences"
-sublime_prefs_path=$HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
-
-if [ -e $iterm_path ]; then
-  ln -s $dotfile_path/symlink/sublime/* $sublime_prefs_path
+if ! type brew > /dev/null; then
+  echo "=== Installing Homebrew"
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-echo "=== Installing Cask Packages for Emacs"
-cd $emacs_dir
-cask install
-cd -
+echo "=== Installing Homebrew packages"
+brew bundle
+
+if type cask > /dev/null; then
+  echo "=== Installing Cask Packages for Emacs"
+  cd $emacs_dir
+  cask install
+  cd -
+else
+  echo "=== Warning: Emacs packages were not installed because cask is not installed"
+fi
 
 echo === Done
