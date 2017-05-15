@@ -54,4 +54,13 @@ else
   echo "=== Warning: Emacs packages were not installed because cask is not installed"
 fi
 
+echo === Setting up System Preferences
+defaults write com.apple.screensaver askForPasswordDelay -int 60 # ask for password after a number of seconds
+defaults write com.apple.finder AppleShowAllFiles TRUE # show hidden files in Finder
+defaults write com.apple.dock autohide -int 1 # auto hide the dock
+defaults write com.apple.dock orientation left # change dock orientation to the left
+defaults write com.apple.dock tilesize 35 # make dock icons smaller
+
+killall Dock # relaunch dock
+
 echo === Done
