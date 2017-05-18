@@ -60,6 +60,7 @@ defaults write com.apple.finder AppleShowAllFiles TRUE # show hidden files in Fi
 defaults write com.apple.dock autohide -int 1 # auto hide the dock
 defaults write com.apple.dock orientation left # change dock orientation to the left
 defaults write com.apple.dock tilesize 35 # make dock icons smaller
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3 # enable full keyboard access for all controls
 
 killall Dock # relaunch dock
 
