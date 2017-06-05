@@ -2,6 +2,7 @@
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi # rbenv init
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi # pyenv init
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi # pyenv-virtualenv init
 export PGDATA=/usr/local/var/postgres
 export PGHOST=localhost
 export PATH=/usr/local/bin:/usr/local/sbin:~/.cask/bin:~/.bin:$PATH
