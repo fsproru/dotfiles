@@ -32,4 +32,3 @@
 (depends-on "jedi")
 (depends-on "pyenv-mode")
 (depends-on "pyenv-mode-auto")
-(depends-on "indium")
