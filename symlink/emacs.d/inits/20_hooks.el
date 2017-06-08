@@ -15,6 +15,8 @@
 (add-hook 'before-save-hook 'whitespace-cleanup)
 (add-hook 'markdown-mode-hook 'flyspell-mode)
 (add-hook 'prog-mode-hook 'yas-minor-mode-on)
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)
 
 (require 'pbcopy)
 (turn-on-pbcopy)

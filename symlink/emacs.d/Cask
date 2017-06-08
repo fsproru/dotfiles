@@ -29,3 +29,7 @@
 (depends-on "mmm-mode")
 (depends-on "pbcopy")
 (depends-on "thrift")
+(depends-on "jedi")
+(depends-on "pyenv-mode")
+(depends-on "pyenv-mode-auto")
+(depends-on "indium")

@@ -3,6 +3,10 @@
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi # rbenv init
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi # pyenv init
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi # pyenv-virtualenv init
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 export PGDATA=/usr/local/var/postgres
 export PGHOST=localhost
 export PATH=/usr/local/bin:/usr/local/sbin:~/.cask/bin:~/.bin:$PATH
