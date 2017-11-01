@@ -32,3 +32,5 @@
 (depends-on "jedi")
 (depends-on "pyenv-mode")
 (depends-on "pyenv-mode-auto")
+(depends-on "vue-mode")
+(depends-on "typescript-mode")
