@@ -6,7 +6,9 @@
 --ignore-dir=.idea
 --ignore-dir=.jhw-cache
 --ignore-dir=vendor/bundle
+--ignore-dir=build
 
+# Xcode
 --type-set=xcode=.pbxproj,.pbxuser,.perspectivev3
 --type-set=ragel=.rl
 --type-set=nib=.xib
@@ -14,13 +16,13 @@
 --type-set=tmstuff=.tmproj,.tm_build_errors
 --type-add=objc=.pch
 
-# Ruby stuff
+# Web
 --type-set=markdown=.markdown
 --type-set=cucumber=.feature
 --type-add=ruby=.slim,.haml,.rake,.erb,.builder,.ru
 --type-add=yaml=.yml,.json
 --type-add=css=.sass,.scss
---type-add=js=.coffee,.eco,.ejs
+--type-add=js=.coffee,.eco,.ejs,.ts
 
 --nonib
 --notmstuff
