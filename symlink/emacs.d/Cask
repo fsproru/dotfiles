@@ -34,3 +34,4 @@
 (depends-on "pyenv-mode-auto")
 (depends-on "vue-mode")
 (depends-on "typescript-mode")
+(depends-on "scala-mode")

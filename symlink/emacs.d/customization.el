@@ -31,6 +31,7 @@
  '(scroll-bar-mode nil)
  '(sh-indentation 2)
  '(tool-bar-mode nil)
+ '(typescript-indent-level 2)
  '(vc-follow-symlinks t)
  '(yas-global-mode t nil (yasnippet)))
 (custom-set-faces
