@@ -27,6 +27,9 @@ alias gc='git commit'
 alias git=hub
 
 # Code highlighting
-alias highlight_pastebuffer='pbpaste | highlight --syntax=ruby --style=solarized-dark --out-format=rtf | pbcopy'
+alias highlight_pastebuffer='pbpaste | highlight --syntax=js --style=solarized-light --out-format=rtf | pbcopy'
+
+# Docker
+alias docker-killall='docker ps -aq --no-trunc | xargs docker rm'
 
 # vim ft=sh
