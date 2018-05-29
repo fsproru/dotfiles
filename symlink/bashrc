@@ -2,14 +2,15 @@
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi # rbenv init
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi # pyenv init
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi # jenv init
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi # pyenv-virtualenv init
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/etc/bash_completion.d/bash_completion/nvm" ] && \. "/usr/local/etc/bash_completion.d/bash_completion/nvm"  # This loads nvm bash_completion
-
+export ANDROID_HOME=~/Library/Android/sdk
 export PGDATA=/usr/local/var/postgres
 export PGHOST=localhost
-export PATH=/usr/local/bin:/usr/local/sbin:~/.cask/bin:~/.bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:~/.cask/bin:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:~/.local/bin:~/.bin:$PATH
 
 export ALTERNATE_EDITOR=emacs EDITOR=emacsclient VISUAL=emacsclient
 export GIT_EDITOR=/usr/local/bin/emacsclient
