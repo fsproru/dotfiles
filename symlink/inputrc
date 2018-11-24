@@ -1,2 +1,7 @@
 set completion-ignore-case On
 set mark-symlinked-directories on
+"\e\e[C": forward-word
+"ƒ": forward-word
+"\e\e[D": backward-word
+"∫": backward-word
+"∂": kill-word
