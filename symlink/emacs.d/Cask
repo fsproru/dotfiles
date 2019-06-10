@@ -35,3 +35,5 @@
 (depends-on "vue-mode")
 (depends-on "typescript-mode")
 (depends-on "scala-mode")
+(depends-on "gradle-mode")
+(depends-on "groovy-mode")

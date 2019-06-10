@@ -24,7 +24,7 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (yasnippet yaml-mode thrift swift-mode slim-mode rspec-mode rhtml-mode pyenv-mode-auto projectile php-mode pbcopy multi-term mmm-mode markdown-mode js2-mode jedi init-loader inf-mongo htmlize go-mode flymake-ruby feature-mode csharp-mode color-theme-solarized coffee-mode cask)))
+    (groovy-mode yasnippet yaml-mode thrift swift-mode slim-mode rspec-mode rhtml-mode pyenv-mode-auto projectile php-mode pbcopy multi-term mmm-mode markdown-mode js2-mode jedi init-loader inf-mongo htmlize go-mode flymake-ruby feature-mode csharp-mode color-theme-solarized coffee-mode cask)))
  '(rspec-use-rake-flag nil)
  '(rspec-use-rake-when-possible nil)
  '(safe-local-variable-values (quote ((require-final-newline))))

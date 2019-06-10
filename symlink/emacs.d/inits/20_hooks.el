@@ -9,6 +9,8 @@
 (add-to-list 'auto-mode-alist '("\\.rake$"    . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
 
+(add-to-list 'auto-mode-alist '("\\.gradle$" . groovy-mode))
+
 ;; TODO: Try out js-mode when emacs 25 comes out
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
