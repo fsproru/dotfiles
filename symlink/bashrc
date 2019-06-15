@@ -10,7 +10,7 @@ export NVM_DIR="$HOME/.nvm"
 export ANDROID_HOME=~/Library/Android/sdk
 export PGDATA=/usr/local/var/postgres
 export PGHOST=localhost
-export PATH=/usr/local/bin:/usr/local/sbin:~/.cask/bin:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:~/.local/bin:~/Library/Python/2.7/bin:~/.bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:~/.cask/bin:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:~/.local/bin:~/Library/Python/2.7/bin:~/.bin:~/.yarn/bin:$PATH
 
 export ALTERNATE_EDITOR=emacs EDITOR=emacsclient VISUAL=emacsclient
 export GIT_EDITOR=/usr/local/bin/emacsclient
