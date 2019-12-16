@@ -31,13 +31,14 @@ setup_teamocil_autocompletion() {
   complete -W "$(teamocil --list)" teamocil
 }
 
-if which teamocil >> /dev/null; then
-  setup_teamocil_autocompletion
-else
+if ! which teamocil >> /dev/null; then
   gem install teamocil
-  setup_teamocil_autocompletion
 fi
+setup_teamocil_autocompletion
 
+if ! which git-duet-commit >> /dev/null; then
+  gem install git-duet
+fi
 export GIT_DUET_GLOBAL=true
 
 # bash-it

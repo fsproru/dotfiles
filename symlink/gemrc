@@ -1,15 +1,12 @@
 ---
-# ADD LOCAL CONFIGURATION HERE
-install: --no-rdoc --no-ri
-update:  --no-rdoc --no-ri
-
-# DO NOT EDIT BELOW THIS LINE
-:verbose: true
+:backtrace: false
 :bulk_threshold: 1000
 :sources:
-- http://gemcutter.org
-- http://gems.rubyforge.org/
-gem: --no-ri --no-rdoc
-:benchmark: false
+- https://rubygems.org/
 :update_sources: true
-:backtrace: false
+:verbose: true
+:concurrent_downloads: 8
+install: "--no-rdoc --no-ri"
+update: "--no-rdoc --no-ri"
+gem: "--no-ri --no-rdoc"
+benchmark: false
