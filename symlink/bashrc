@@ -7,6 +7,16 @@ if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/etc/bash_completion.d/bash_completion/nvm" ] && \. "/usr/local/etc/bash_completion.d/bash_completion/nvm"  # This loads nvm bash_completion
+
+# restrict the space size so node doesn't run out of memory and crash
+export NODE_OPTIONS=--max_old_space_size=4096
+
+# tsn Android home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+# export ANDROID_HOME=/usr/local/share/android-sdk
+# export ANDROID_SDK_ROOT=/usr/local/share/android-sdk
+
+# regular Android home
 export ANDROID_HOME=~/Library/Android/sdk
 export PGDATA=/usr/local/var/postgres
 export PGHOST=localhost
@@ -47,3 +57,9 @@ export BASH_IT_THEME='bobby'
 export THEME_CLOCK_CHECK=false
 export THEME_BATTERY_PERCENTAGE_CHECK=false
 source $BASH_IT/bash_it.sh
+
+###-tns-completion-start-###
+if [ -f /Users/fsproru/.tnsrc ]; then
+    source /Users/fsproru/.tnsrc
+fi
+###-tns-completion-end-###
