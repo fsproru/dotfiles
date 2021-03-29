@@ -34,6 +34,12 @@ if [ -f ~/.aliases ]; then
   . ~/.aliases
 fi
 
+# oh my zsh
+export ZSH=$HOME/.ohmyzsh
+export ZSH_THEME=robbyrussell
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
+
 setup_teamocil_autocompletion() {
   complete -W "$(teamocil --list)" teamocil
 }

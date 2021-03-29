@@ -7,3 +7,6 @@
 [submodule "symlink/bash_it"]
         path = symlink/bash_it
         url = git@github.com:Bash-it/bash-it.git
+[submodule "symlink/ohmyzsh"]
+	path = symlink/ohmyzsh
+	url = git@github.com:ohmyzsh/ohmyzsh.git
