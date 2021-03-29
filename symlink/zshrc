@@ -1,0 +1,55 @@
+#!/usr/bin/env zsh
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi # rbenv init
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi # pyenv init
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi # jenv init
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi # pyenv-virtualenv init
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+
+# restrict the space size so node doesn't run out of memory and crash
+export NODE_OPTIONS=--max_old_space_size=4096
+
+# tsn Android home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+# export ANDROID_HOME=/usr/local/share/android-sdk
+# export ANDROID_SDK_ROOT=/usr/local/share/android-sdk
+
+# regular Android home
+export ANDROID_HOME=~/Library/Android/sdk
+export PGDATA=/usr/local/var/postgres
+export PGHOST=localhost
+export PATH=/usr/local/bin:/usr/local/sbin:~/.cask/bin:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:~/.local/bin:~/Library/Python/2.7/bin:~/.bin:~/.yarn/bin:$PATH
+
+export ALTERNATE_EDITOR=emacs EDITOR=emacsclient VISUAL=emacsclient
+export GIT_EDITOR=/usr/local/bin/emacsclient
+
+export HISTCONTROL=ignoredups
+export LANG=en_US.UTF-8
+
+# pass <C-s> and other terminal keys to vim
+stty -ixon
+
+if [ -f ~/.aliases ]; then
+  . ~/.aliases
+fi
+
+setup_teamocil_autocompletion() {
+  complete -W "$(teamocil --list)" teamocil
+}
+
+if ! which teamocil >> /dev/null; then
+  gem install teamocil
+fi
+setup_teamocil_autocompletion
+
+if ! which git-duet-commit >> /dev/null; then
+  gem install git-duet
+fi
+export GIT_DUET_GLOBAL=true
+
+###-tns-completion-start-###
+if [ -f ~/.tnsrc ]; then
+    source ~/.tnsrc
+fi
+###-tns-completion-end-###
