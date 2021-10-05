@@ -29,6 +29,7 @@ export HISTCONTROL=ignoredups
 shopt -s histappend
 
 export LANG=en_US.UTF-8
+export NODE_OPTIONS=--max_old_space_size=4096 # limit node memory leaks
 
 # pass <C-s> and other terminal keys to vim
 stty -ixon

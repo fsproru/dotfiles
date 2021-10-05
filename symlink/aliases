@@ -31,5 +31,6 @@ alias highlight_pastebuffer='pbpaste | highlight --syntax=js --style=solarized-l
 
 # Docker
 alias docker-killall='docker ps -aq --no-trunc | xargs docker rm'
+alias docker-clean='rm -rf ~/Library/Containers/com.docker.docker/Data/*'
 
 # vim ft=sh
