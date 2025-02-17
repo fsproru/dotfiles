@@ -1,9 +1,6 @@
 [submodule "vimfiles"]
         path = vimfiles
         url = git@github.com:fsproru/vimfiles.git
-[submodule "symlink/plugins/ssh-find-agent"]
-        path = symlink/plugins/ssh-find-agent
-        url = git://github.com/wwalker/ssh-find-agent.git
 [submodule "symlink/bash_it"]
         path = symlink/bash_it
         url = git@github.com:Bash-it/bash-it.git
